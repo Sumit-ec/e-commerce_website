@@ -8,6 +8,8 @@ body {
     --bs-gutter-x: 0;
 }
 
+/* Signin page Styling */
+
 .input-signin {
     border: none;
     border-bottom: 1px solid #000;
@@ -24,12 +26,39 @@ body {
     color: #000;
 }
 
+/* Login Page styling */
+
+.custom-login-btn {
+  background-color: #DB4444;
+  border-color: #DB4444;
+  color: #fff;
+  width: 29%;
+}
+
+.custom-login-btn:hover,
+.custom-login-btn:focus,
+.custom-login-btn:active,
+.custom-login-btn:focus:active {
+  background-color: #DB4444 !important;
+  border-color: #DB4444 !important;
+  box-shadow: none;
+}
+
+.btn {
+    --bs-btn-border-radius: none;
+}
+
 /* Navigation Bar */
 
 .nav-item {
     font-family: "Poppins", sans-serif;
 }
 
+@media (min-width: 992px) {
+    .w-md-50 {
+        width: 50% !important;
+    }
+}
 
 /* Footer styling */
 
@@ -72,11 +101,4 @@ body {
 .subscribe-form button {
   background-color: transparent;
   border: none;
-}
-
-
-@media (min-width: 992px) {
-    .w-md-50 {
-        width: 50% !important;
-    }
 }
