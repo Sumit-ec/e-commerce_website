@@ -8,6 +8,18 @@ body {
     --bs-gutter-x: 0;
 }
 
+/* Navigation Bar */
+
+.nav-item {
+    font-family: "Poppins";
+}
+
+@media (min-width: 992px) {
+    .w-md-50 {
+        width: 50% !important;
+    }
+}
+
 /* Signin page Styling */
 
 .input-signin {
@@ -48,17 +60,179 @@ body {
     --bs-btn-border-radius: none;
 }
 
-/* Navigation Bar */
+/* Contact Page Styling */
 
-.nav-item {
-    font-family: "Poppins", sans-serif;
+.top-nav {
+    margin-top: 53px;
+    margin-left: 0px;
 }
 
-@media (min-width: 992px) {
-    .w-md-50 {
-        width: 50% !important;
+.brd-cum-home {
+    font-weight: 400;
+    color: #000000;
+    font-size: 14px;
+}
+
+.breadcrumb {
+    background: transparent;
+    padding: 0;
+    margin-bottom: 16px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.breadcrumb-item {
+    font-size: 14px;
+    font-weight: 400;
+    color: #000000;
+}
+
+.breadcrumb-item a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.breadcrumb-item.active {
+    font-weight: 600;
+    color: #000;
+}
+
+
+.detail-contact{
+    border-bottom: 1px #000 solid ;
+}
+
+.contact-container {
+    padding-right: 101px;
+}
+.call-us {
+    font-weight: 500;
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+}
+
+.call-details {
+    font-family: "Poppins";
+    font-weight: 400;
+    font-size: 14px;
+    color: #000000;
+}
+
+.color-bg {
+    background-color: #F5F5F5;
+}
+
+.form-control.color-bg:focus {
+  background-color: #F5F5F5 !important;
+
+}
+
+.button-submit {
+  float: inline-end;
+}
+
+@media (max-width: 767px) {
+    .button-submit {
+        width: 100% !important;
     }
 }
+
+/* About Page Styling */
+
+.head-text {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 54px;
+    text-align: justify;
+}
+
+.head-body {
+    font-family: "Poppins";
+    font-weight: 400;
+    font-size: 16px;
+    text-align: justify;
+}
+
+.text-container {
+    padding-right: 80px;
+}
+
+.container-fluid {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.img-right {
+  margin-right: 0;
+  padding: 0;
+  display: block;
+}
+
+@media (max-width: 767px) {
+    .img-screen {
+        padding: 20px !important;
+    }
+}
+
+.about-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.highlighted-card {
+  background-color: #DB4444;
+  color: white;
+  border: none;
+}
+
+.about-number {
+font-family: "Inter", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.about-label {
+  font-family: "Poppins";
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+  color: #333;
+}
+
+.card-size {
+    padding: 10px;
+}
+
+.founder-details {
+    font-family:  "Inter", sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.founder-position {
+    font-family: "Poppins";
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.bottom-section {
+    font-family: "Poppins";
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.bottom-text {
+    font-family: "Poppins";
+    font-size: 14px;
+    font-weight: 400;
+    color: #000000;
+}
+
 
 /* Footer styling */
 

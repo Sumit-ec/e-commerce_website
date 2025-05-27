@@ -5,7 +5,6 @@ export default function Login() {
   return (
     <div className="mt-3 pb-5 mb-5">
       <div className="row">
-        {/* Image Section */}
         <div className="col-md-8 d-flex justify-content-center justify-content-md-start">
           <div className="text-center text-md-start">
             <img
@@ -16,7 +15,6 @@ export default function Login() {
           </div>
         </div>
 
-        {/* Form Section */}
         <div className="col-md-4 d-flex align-items-center">
           <div className="w-100 p-5">
             <h2 className="mb-3">Login to Exclusive</h2>
@@ -38,7 +36,6 @@ export default function Login() {
                 />
               </div>
 
-              {/* Button Row: Log In and Forget Password */}
               <div className="d-flex justify-content-between align-items-center">
                 <button type="submit" className="btn custom-login-btn">
                   Log In
