@@ -11,7 +11,7 @@ body {
 /* Navigation Bar */
 
 .nav-item {
-    font-family: "Poppins";
+font-family: "Poppins", sans-serif;
 }
 
 @media (min-width: 992px) {
@@ -19,6 +19,64 @@ body {
         width: 50% !important;
     }
 }
+
+.nav-link.active {
+  text-decoration: underline;
+}
+
+.active-link {
+  border-bottom: 1px solid #000000;
+  padding-bottom: 2px;
+}
+
+/* Home Page Styling */
+
+
+.top-section {
+  display: flex;
+}
+
+.bar-line {
+  border-right: 1px solid #000;
+  height: 100%;
+  padding-top: 25px;
+}
+
+.banner-img {
+  width: 100%;
+  height: 100%;
+  /* object-fit: contain; */
+}
+
+
+.sidebar {
+  width: 250px;
+  padding-right: 20px;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+}
+
+.list-item {
+  font-family: "Poppins", sans-serif;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.list-item-arrow::after {
+  content: ">";
+  float: right;
+}
+
+.main-banner {
+  flex-grow: 1;
+  padding: 35px;
+}
+
 
 /* Signin page Styling */
 
@@ -31,11 +89,17 @@ body {
 .form-control:focus {
     box-shadow: none;
 }
+
 .signin-image {
     width: 900px;
 }
+
 .login-button {
     color: #000;
+}
+
+.signup-button:hover {
+  border: 2px solid black !important;
 }
 
 /* Login Page styling */
@@ -45,7 +109,23 @@ body {
   border-color: #DB4444;
   color: #fff;
   width: 29%;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
 }
+
+
+@media (min-width: 767px) and (max-width: 1034px) {
+  .custom-login-btn {
+    width: 100% !important;
+  }
+}
+
+/* @media (max-width: 345px) {
+    .custom-login-btn  {
+        width: 100% !important;
+    }
+} */
 
 .custom-login-btn:hover,
 .custom-login-btn:focus,
@@ -114,7 +194,7 @@ body {
 }
 
 .call-details {
-    font-family: "Poppins";
+    font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-size: 14px;
     color: #000000;
@@ -122,6 +202,13 @@ body {
 
 .color-bg {
     background-color: #F5F5F5;
+    border: none;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.area-message {
+    height: 207px;
 }
 
 .form-control.color-bg:focus {
@@ -131,12 +218,22 @@ body {
 
 .button-submit {
   float: inline-end;
+   border-radius: 4px;  
+   font-family: "Poppins", sans-serif;
+   font-weight: 500;    
+   font-size: 16px; 
+   padding: 16px 48px 16px 48px;
 }
 
 @media (max-width: 767px) {
     .button-submit {
         width: 100% !important;
     }
+}
+
+.space-around {
+    margin-top: 100px;
+    margin-bottom: 65px;
 }
 
 /* About Page Styling */
@@ -149,7 +246,7 @@ body {
 }
 
 .head-body {
-    font-family: "Poppins";
+    font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-size: 16px;
     text-align: justify;
@@ -177,16 +274,13 @@ body {
 }
 
 .about-card {
-  border: 1px solid #e0e0e0;
   border-radius: 8px;
   background-color: #fff;
-  box-shadow: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.highlighted-card {
-  background-color: #DB4444;
-  color: white;
-  border: none;
+.border-primary {
+    --bs-border-opacity: 1;
+    border-color: #000 !important;
 }
 
 .about-number {
@@ -197,12 +291,31 @@ font-family: "Inter", sans-serif;
 }
 
 .about-label {
-  font-family: "Poppins";
+  font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-weight: 400;
   margin: 0;
   color: #333;
 }
+
+.about-card {
+  border-radius: 8px;
+  background-color: #fff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+.about-card:hover {
+  background-color: #DB4444;
+  color: white;
+  border: none;
+}
+
+.about-card:hover .about-label,
+.about-card:hover .about-number {
+  color: white;
+}
+
 
 .card-size {
     padding: 10px;
@@ -231,6 +344,36 @@ font-family: "Inter", sans-serif;
     font-size: 14px;
     font-weight: 400;
     color: #000000;
+}
+
+
+.founders-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 40px 0;
+  /* background-color: red; */
+}
+
+.founder-card {
+  /* border: 1px solid black; */
+  border-radius: 8px;
+  background-color: #fff;
+  width: 370px;
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+}
+
+.founder-card:hover {
+  transform: translateY(-5px);
+}
+
+@media (max-width: 768px) {
+  .founders-container {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 

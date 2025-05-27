@@ -15,7 +15,13 @@ export default function Banner() {
       </p>
       <span
         className="position-absolute"
-        style={{ top: 0, right: "65px", maxWidth: "78px", maxHeight: "24px" }}
+        style={{
+          top: 0,
+          right: "65px",
+          maxWidth: "78px",
+          maxHeight: "24px",
+          marginTop: "15px",
+        }}
       >
         <select
           name="language"

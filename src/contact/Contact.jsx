@@ -15,7 +15,7 @@ export default function Contact() {
         </ol>
       </nav>
 
-      <div className="row mt-5">
+      <div className="row space-around">
         <div className="col-md-4 mb-4 contact-container">
           <div className="mb-4 detail-contact">
             <div className="d-flex align-items-start mb-2">
@@ -39,9 +39,9 @@ export default function Contact() {
                 src="icons-mail.svg"
                 alt="Mail Icon"
                 width="40"
-                className="me-2 mt-1"
+                className="me-2 mt-1 "
               />
-              <h5 className="call-details mt-3">Write To Us</h5>
+              <h5 className="call-us mt-3">Write To Us</h5>
             </div>
             <p className="call-details">
               Fill out our form and we will contact you within 24 hours.
@@ -53,47 +53,43 @@ export default function Contact() {
 
         <div className="col-md-8">
           <form>
-            <div className="row mb-3 d-flex justify-content-between">
-              <div className="col-md-12 col-lg-3 mb-2">
-                <input
-                  type="text"
-                  className="form-control color-bg"
-                  placeholder="Your Name *"
-                  required
-                />
-              </div>
-              <div className="col-md-12 col-lg-3 mb-2">
-                <input
-                  type="email"
-                  className="form-control color-bg"
-                  placeholder="Your Email *"
-                  required
-                />
-              </div>
-              <div className="col-md-12 col-lg-3 mb-2">
-                <input
-                  type="tel"
-                  className="form-control color-bg"
-                  placeholder="Your Phone *"
-                  required
-                />
-              </div>
+            <div className="mb-3 d-flex flex-column flex-md-row gap-4 justify-content-between">
+              {/* <div className=""> */}
+              <input
+                type="text"
+                className="form-control color-bg"
+                placeholder="Your Name *"
+                required
+              />
+              {/* </div> */}
+              {/* <div className=""> */}
+              <input
+                type="email"
+                className="form-control color-bg"
+                placeholder="Your Email *"
+                required
+              />
+              {/* </div>
+              <div className=""> */}
+              <input
+                type="tel"
+                className="form-control color-bg"
+                placeholder="Your Phone *"
+                required
+              />
+              {/* </div> */}
             </div>
 
             <div className="mb-3">
               <textarea
-                className="form-control color-bg"
+                className="form-control color-bg area-message"
                 rows="5"
                 placeholder="Your Message"
                 required
               ></textarea>
             </div>
 
-            <button
-              type="submit"
-              className="btn btn-danger px-4 button-submit"
-              style={{ borderRadius: "4px" }}
-            >
+            <button type="submit" className="btn btn-danger px-4 button-submit">
               Send Message
             </button>
           </form>

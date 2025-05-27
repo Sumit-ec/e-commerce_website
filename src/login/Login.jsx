@@ -17,7 +17,7 @@ export default function Login() {
 
         <div className="col-md-4 d-flex align-items-center">
           <div className="w-100 p-5">
-            <h2 className="mb-3">Login to Exclusive</h2>
+            <h2 className="mb-3">Log in to Exclusive</h2>
             <p className="mb-4">Enter your details below</p>
 
             <form>

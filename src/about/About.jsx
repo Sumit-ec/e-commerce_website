@@ -40,42 +40,8 @@ export default function About() {
         </div>
       </div>
 
-      <div className="row text-center mt-5 justify-content-center mx-5">
-        <div className="col-md-3 mb-4 card-size">
-          <div className="about-card p-4 border border-primary">
-            <img src="Services_1.svg" alt="Sellers" className="mb-3" />
-            <h4 className="about-number">10.5k</h4>
-            <p className="about-label">Sellers active our site</p>
-          </div>
-        </div>
-
-        <div className="col-md-3 mb-4 card-size">
-          <div className="about-card p-4 highlighted-card bg-danger text-white">
-            <img src="Services_2.svg" alt="Monthly Sale" className="mb-3" />
-            <h4 className="about-number">33k</h4>
-            <p className="about-label">Monthly Product Sale</p>
-          </div>
-        </div>
-
-        <div className="col-md-3 mb-4 card-size">
-          <div className="about-card p-4 border border-primary">
-            <img src="Services_3.svg" alt="Customers" className="mb-3" />
-            <h4 className="about-number">45.5k</h4>
-            <p className="about-label">Customer active in our site</p>
-          </div>
-        </div>
-
-        <div className="col-md-3 mb-4 card-size">
-          <div className="about-card p-4 border border-primary">
-            <img src="Services_4.svg" alt="Annual Sale" className="mb-3" />
-            <h4 className="about-number">25k</h4>
-            <p className="about-label">Annual gross sale in our site</p>
-          </div>
-        </div>
-      </div>
-
-      <div className="row mt-5 justify-content-center mx-5 text-center">
-        <div className="col-md-4 mb-5">
+      <div className="founders-container d-flex justify-content-around">
+        <div className="founder-card">
           <img
             src="Tome-Cruise.svg"
             alt="Tom Cruise"
@@ -83,14 +49,14 @@ export default function About() {
           />
           <h5 className="founder-details">Tom Cruise</h5>
           <p className="founder-position">Founder & Chairman</p>
-          <div className="d-flex justify-content-center gap-3">
+          <div className="d-flex gap-3">
             <img src="Icon-Twitter.svg" alt="Twitter" />
             <img src="icon-instagram.svg" alt="Instagram" />
             <img src="Icon-Linkedin.svg" alt="LinkedIn" />
           </div>
         </div>
 
-        <div className="col-md-4 mb-5">
+        <div className="founder-card">
           <img
             src="Emma-Watson.svg"
             alt="Emma Watson"
@@ -98,14 +64,14 @@ export default function About() {
           />
           <h5 className="founder-details">Emma Watson</h5>
           <p className="founder-position">Managing Director</p>
-          <div className="d-flex justify-content-center gap-3">
+          <div className="d-flex gap-3 ms-0">
             <img src="Icon-Twitter.svg" alt="Twitter" />
             <img src="icon-instagram.svg" alt="Instagram" />
             <img src="Icon-Linkedin.svg" alt="LinkedIn" />
           </div>
         </div>
 
-        <div className="col-md-4 mb-5">
+        <div className="founder-card">
           <img
             src="Will-Smith.svg"
             alt="Will Smith"
@@ -113,13 +79,27 @@ export default function About() {
           />
           <h5 className="founder-details">Will Smith</h5>
           <p className="founder-position">Product Designer</p>
-          <div className="d-flex justify-content-center gap-3">
+          <div className="d-flex gap-3">
             <img src="Icon-Twitter.svg" alt="Twitter" />
             <img src="icon-instagram.svg" alt="Instagram" />
             <img src="Icon-Linkedin.svg" alt="LinkedIn" />
           </div>
         </div>
       </div>
+
+      {/* <div>
+        <Swiper pagination={true} modules={[Pagination]} className="mySwiper">
+          <SwiperSlide>Slide 1</SwiperSlide>
+          <SwiperSlide>Slide 2</SwiperSlide>
+          <SwiperSlide>Slide 3</SwiperSlide>
+          <SwiperSlide>Slide 4</SwiperSlide>
+          <SwiperSlide>Slide 5</SwiperSlide>
+          <SwiperSlide>Slide 6</SwiperSlide>
+          <SwiperSlide>Slide 7</SwiperSlide>
+          <SwiperSlide>Slide 8</SwiperSlide>
+          <SwiperSlide>Slide 9</SwiperSlide>
+        </Swiper>
+      </div> */}
 
       <div
         className="row text-center my-5 justify-content-center px-5"

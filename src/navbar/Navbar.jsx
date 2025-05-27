@@ -1,14 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export default function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg bg-white border-bottom px-4 mt-3">
       <div className="container-fluid d-flex flex-column flex-lg-row align-items-start align-items-lg-center">
         <div className="d-flex w-100 w-md-50 justify-content-between align-items-center mb-2 mb-lg-0">
-          <Link className="navbar-brand fw-bold fs-4 text-nav" to="/">
+          <NavLink className="navbar-brand fw-bold fs-4 text-nav" to="/">
             Exclusive
-          </Link>
+          </NavLink>
 
           <button
             className="navbar-toggler"
@@ -26,30 +26,46 @@ export default function Navbar() {
         <div className="collapse navbar-collapse w-100" id="navbarNav">
           <div className="d-flex flex-column flex-lg-row w-100 justify-content-between align-items-start align-items-lg-center">
             <div className="d-flex flex-column flex-lg-row gap-4 mt-3 mt-lg-0">
-              <Link
-                className="nav-item text-decoration-none text-dark fs-5"
+              <NavLink
+                className={({ isActive }) =>
+                  `nav-item text-decoration-none text-dark fs-5 ${
+                    isActive ? "active-link" : ""
+                  }`
+                }
                 to="/home"
               >
                 Home
-              </Link>
-              <Link
-                className="nav-item text-decoration-none text-dark fs-5"
+              </NavLink>
+              <NavLink
+                className={({ isActive }) =>
+                  `nav-item text-decoration-none text-dark fs-5 ${
+                    isActive ? "active-link" : ""
+                  }`
+                }
                 to="/contact"
               >
                 Contact
-              </Link>
-              <Link
-                className="nav-item text-decoration-none text-dark fs-5"
+              </NavLink>
+              <NavLink
+                className={({ isActive }) =>
+                  `nav-item text-decoration-none text-dark fs-5 ${
+                    isActive ? "active-link" : ""
+                  }`
+                }
                 to="/about"
               >
                 About
-              </Link>
-              <Link
-                className="nav-item text-decoration-none text-dark fs-5"
+              </NavLink>
+              <NavLink
+                className={({ isActive }) =>
+                  `nav-item text-decoration-none text-dark fs-5 ${
+                    isActive ? "active-link" : ""
+                  }`
+                }
                 to="/sign-in"
               >
                 Sign In
-              </Link>
+              </NavLink>
             </div>
 
             <div className="mt-3 mt-lg-0">

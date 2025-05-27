@@ -44,13 +44,16 @@ export default function Signin() {
                   placeholder="Password"
                 />
               </div>
-              <button type="submit" className="btn btn-danger w-100 mt-2 mb-1">
+              <button
+                type="submit"
+                className="btn btn-danger w-100 mt-2 mb-1 rounded"
+              >
                 Create Account
               </button>
 
               <button
                 type="button"
-                className="btn mt-3 w-100 d-flex align-items-center justify-content-center signup-button"
+                className="btn mt-3 w-100 d-flex align-items-center justify-content-center signup-button rounded"
               >
                 <img
                   src="/Icon-Google.svg"
