@@ -11,6 +11,12 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 
 import "./SwiperStyle.css";
+import FlashSale from "./FlashSale";
+import Categories from "./Categories";
+import BestSellingProduct from "./BestSellingProduct";
+import MusicJbl from "./MusicJbl";
+import OurProduct from "./OurProduct";
+import Featured from "./Featured";
 
 export default function Home() {
   return (
@@ -32,18 +38,33 @@ export default function Home() {
         </div>
 
         {/* Main Banner */}
-        <div className=" col-9 d-flex main-banner p-5">
+        <div className=" col-9 d-flex main-banner">
           <Swiper pagination={true} modules={[Pagination]} className="mySwiper">
             <SwiperSlide>
               <img src="Iphone_img.jpg" alt="Iphone image" />
             </SwiperSlide>
-            <SwiperSlide>Slide 2</SwiperSlide>
-            <SwiperSlide>Slide 3</SwiperSlide>
-            <SwiperSlide>Slide 4</SwiperSlide>
-            <SwiperSlide>Slide 5</SwiperSlide>
+            <SwiperSlide>
+              <img src="Iphone_img.jpg" alt="Iphone image" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="Iphone_img.jpg" alt="Iphone image" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="Iphone_img.jpg" alt="Iphone image" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="Iphone_img.jpg" alt="Iphone image" />
+            </SwiperSlide>
           </Swiper>
         </div>
       </div>
+
+      <FlashSale />
+      <Categories />
+      <BestSellingProduct />
+      <MusicJbl />
+      <OurProduct />
+      <Featured />
     </div>
   );
 }
