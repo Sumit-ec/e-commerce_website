@@ -64,7 +64,6 @@ export default function Featured() {
           className="col-md-6 d-flex flex-column gap-3"
           style={{ height: "600px" }}
         >
-          {/* Top - Full Width Card */}
           <div
             className="card text-white bg-dark border-0 rounded overflow-hidden w-100"
             style={{ height: "48%" }}
@@ -95,7 +94,6 @@ export default function Featured() {
             className="d-flex gap-3"
             style={{ height: "48%", marginTop: "20px" }}
           >
-            {/* Speaker Card */}
             <div className="card text-white bg-dark border-0 rounded overflow-hidden w-50">
               <img
                 src="Speaker.svg"

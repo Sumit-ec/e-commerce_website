@@ -3,7 +3,7 @@ import React from "react";
 export default function FlashSale() {
   return (
     <div className="container py-5 line-bttn">
-      {/* Header Section */}
+      {/* Header Section with red bar and "Today's" */}
       <div className="d-flex justify-content-between align-items-center flex-wrap">
         <div
           className="d-flex align-items-center gap-3"
@@ -16,15 +16,12 @@ export default function FlashSale() {
         </div>
       </div>
 
-      {/* Flash Sale with counter */}
-      <div className="d-flex justify-content-between align-items-center flex-wrap">
-        <h2
-          className="fw-bold mb-0"
-          style={{ paddingLeft: "20px", paddingTop: "10px" }}
-        >
-          Flash Sales
-        </h2>
-        <div className="d-flex gap-3 mt-3 mt-md-0 ms-3 me-3">
+      {/* Flash Sales title + counter + arrow buttons */}
+      <div className="d-flex justify-content-between align-items-center flex-wrap px-3 py-2">
+        <h2 className="fw-bold mb-0">Flash Sales</h2>
+
+        {/* Countdown */}
+        <div className="d-flex gap-3 align-items-center">
           <div className="text-center">
             <small className="text-muted">Days</small>
             <h5 className="mb-0 fw-bold">03</h5>
@@ -41,6 +38,16 @@ export default function FlashSale() {
             <small className="text-muted">Seconds</small>
             <h5 className="mb-0 fw-bold">56</h5>
           </div>
+        </div>
+
+        {/* Arrow Buttons */}
+        <div className="d-flex gap-2">
+          <button className="btn btn-light border rounded-circle p-2">
+            <img src="LeftArrow.svg" alt="Left" width="36px" height="36px" />
+          </button>
+          <button className="btn btn-light border rounded-circle p-2">
+            <img src="RightArrow.svg" alt="Right" width="36px" height="36px" />
+          </button>
         </div>
       </div>
 
@@ -62,12 +69,12 @@ export default function FlashSale() {
               <img
                 src="Wishlist.svg"
                 alt="heart"
-                style={{ position: "relative", top: "2px", width: "20px" }}
+                style={{ top: "2px", width: "20px" }}
               />
               <img
                 src="View.svg"
                 alt="eye"
-                style={{ position: "relative", top: "4px", width: "20px" }}
+                style={{ top: "4px", width: "20px" }}
               />
             </div>
             <div className="card-body">
@@ -80,19 +87,18 @@ export default function FlashSale() {
               </p>
               <div className="text-warning">
                 <img src="Fivestar.svg" alt="star" />
-                <span className="text-muted">(65)</span>
+                <span className="text-muted">(88)</span>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Product 2 (Modified with button inside image area) */}
+        {/* Product 2 */}
         <div className="col-md-3 padding-card">
           <div className="card position-relative h-100">
             <span className="badge bg-danger position-absolute top-0 start-0 m-2">
               -35%
             </span>
-            {/* Image and button wrapper */}
             <div
               className="position-relative"
               style={{ backgroundColor: "#F5F5F5" }}
@@ -106,23 +112,15 @@ export default function FlashSale() {
                 <img
                   src="Wishlist.svg"
                   alt="heart"
-                  style={{ position: "relative", top: "2px", width: "20px" }}
+                  style={{ top: "2px", width: "20px" }}
                 />
                 <img
                   src="View.svg"
                   alt="eye"
-                  style={{ position: "relative", top: "4px", width: "20px" }}
+                  style={{ top: "4px", width: "20px" }}
                 />
               </div>
-
-              <button
-                className="btn btn-dark btn-sm position-absolute w-100 start-50 translate-middle-x"
-                style={{ bottom: "10px" }}
-              >
-                Add to Cart
-              </button>
             </div>
-
             <div className="card-body">
               <h6 className="card-title card-info">AK-900 Wired Keyboard</h6>
               <p className="card-text text-danger fw-bold mb-0">
@@ -133,7 +131,7 @@ export default function FlashSale() {
               </p>
               <div className="text-warning">
                 <img src="FourStar.svg" alt="star" />
-                <span className="text-muted">(65)</span>
+                <span className="text-muted">(75)</span>
               </div>
             </div>
           </div>
@@ -155,16 +153,15 @@ export default function FlashSale() {
               <img
                 src="Wishlist.svg"
                 alt="heart"
-                style={{ position: "relative", top: "2px", width: "20px" }}
+                style={{ top: "2px", width: "20px" }}
               />
               <img
                 src="View.svg"
                 alt="eye"
-                style={{ position: "relative", top: "4px", width: "20px" }}
+                style={{ top: "4px", width: "20px" }}
               />
             </div>
-
-            <div className="card-body ">
+            <div className="card-body">
               <h6 className="card-title card-info">IPS LCD Gaming Monitor</h6>
               <p className="card-text text-danger fw-bold mb-0">
                 $370{" "}
@@ -174,7 +171,7 @@ export default function FlashSale() {
               </p>
               <div className="text-warning">
                 <img src="Fivestar.svg" alt="star" />
-                <span className="text-muted">(65)</span>
+                <span className="text-muted">(99)</span>
               </div>
             </div>
           </div>
@@ -196,15 +193,14 @@ export default function FlashSale() {
               <img
                 src="Wishlist.svg"
                 alt="heart"
-                style={{ position: "relative", top: "2px", width: "20px" }}
+                style={{ top: "2px", width: "20px" }}
               />
               <img
                 src="View.svg"
                 alt="eye"
-                style={{ position: "relative", top: "4px", width: "20px" }}
+                style={{ top: "4px", width: "20px" }}
               />
             </div>
-
             <div className="card-body">
               <h6 className="card-title card-info">S-Series Comfort Chair</h6>
               <p className="card-text text-danger fw-bold mb-0">
@@ -215,7 +211,7 @@ export default function FlashSale() {
               </p>
               <div className="text-warning">
                 <img src="FourHalfStar.svg" alt="star" />
-                <span className="text-muted">(65)</span>
+                <span className="text-muted">(99)</span>
               </div>
             </div>
           </div>

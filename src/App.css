@@ -31,6 +31,62 @@ font-family: "Poppins", sans-serif;
 
 /* Home Page Styling */
 
+.button-menu{
+  background-color: #fff;
+  color: #000;
+  border-radius: 4px;
+  border: 1px solid #000;
+  padding: 4px 8px 4px 8px;
+}
+
+.large-div {
+  min-height: 400px;
+}
+
+.side-banner{
+  background-color: #000;
+  color: #fff;
+  min-height: 400px;
+  padding: 50px;
+  border-radius: 8px;
+}
+
+.main-banner {
+  flex-grow: 1;
+  padding: 35px;
+}
+
+.text-iphone {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.iphone-shop-button {
+  padding: 10px 20px;
+  background-color: black;
+  color: #fff;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .text-iphone {
+    font-size: 1.5rem;
+  }
+
+  .iphone-shop-button {
+    font-size: 0.9rem;
+  }
+}
+
+.iphone-14 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+
 .red-bar-style {
   width: 20px;
   height: 40px;
@@ -112,11 +168,6 @@ font-family: "Poppins", sans-serif;
   float: right;
 }
 
-.main-banner {
-  flex-grow: 1;
-  padding: 35px;
-}
-
 
 /* Flash Sale Home Page Styling */
 
@@ -143,9 +194,20 @@ font-family: "Poppins", sans-serif;
   border-color: #dc3545;
 }
 
-/* .category-card:hover img {
-  filter: brightness(0) invert(1); 
-} */
+.category-name {
+  font-weight: 400;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+}
+
+@media (max-width: 478px) {
+  .category-header {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 1rem;
+  }
+}
+
 
 /* Best Selling Products  */
 
@@ -179,6 +241,13 @@ font-family: "Poppins", sans-serif;
 }
 
 /* MusicJbl Section */
+
+@media (max-width: 575.98px) {
+  .responsive-rounded {
+    border-radius: 0 !important;
+  }
+}
+
 
 .color-text {
   color: #00FF66;
@@ -227,6 +296,43 @@ font-family: "Poppins", sans-serif;
   text-align: center;
   font-weight: 400;
 }
+
+.image-container {
+  position: relative;
+  width: 100%;
+}
+
+.icon-img {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.price-rating {
+  font-size: 0.85rem;
+}
+
+.rating-stars {
+  height: 14px;
+}
+
+.review-count {
+  font-size: 0.8rem;
+}
+
+
+.new-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #00FF66;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+
 
 
 /* Featured Section  */
@@ -487,19 +593,19 @@ font-family: "Inter", sans-serif;
 }
 
 .founder-position {
-    font-family: "Poppins";
+    font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-size: 16px;
 }
 
 .bottom-section {
-    font-family: "Poppins";
+    font-family: "Poppins", sans-serif;
     font-size: 20px;
     font-weight: 600;
 }
 
 .bottom-text {
-    font-family: "Poppins";
+    font-family: "Poppins", sans-serif;
     font-size: 14px;
     font-weight: 400;
     color: #000000;
@@ -535,6 +641,60 @@ font-family: "Inter", sans-serif;
   }
 }
 
+/* Cart Page  */
+
+.return-shop-button {
+  color: #000;
+  background-color: #FFFFFF;
+  border: 1px solid #000;
+  border-radius: 4px;
+  padding: 16px 48px 16px 48px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.return-shop-button:hover {
+  background-color: #DB4444;
+  color: #FFFFFF;
+}
+
+.table-head-text {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #000000;
+}
+
+.table > tbody > tr > td {
+  border-bottom: none !important;
+}
+
+.table > tbody > tr {
+  background-color: transparent !important;
+}
+
+
+/* WishList Page */
+
+.name-header {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.wishlist-button{
+  background-color: #FFFFFF;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 4px;
+  padding: 16px 48px 16px 48px;
+}
+
+.wishlist-button:hover {
+  background-color: #DB4444;
+  color: #FFFFFF;
+}
 
 /* Footer styling */
 
@@ -555,7 +715,7 @@ font-family: "Inter", sans-serif;
     border: 2px solid black;
 }
 .download-para {
-    font-family: "Poppins";
+    font-family: "Poppins", sans-serif;
     font-weight: 500;
     font-size: 12px;
 }

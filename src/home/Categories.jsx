@@ -8,26 +8,38 @@ export default function Categories() {
         <div className="me-2 red-bar-style"></div>
         <h5 className="header-text mb-0">Categories</h5>
       </div>
-      <h2 className="fw-bold mb-4">Browse By Category</h2>
+
+      {/* Browse By Category + Arrows */}
+      <div className="d-flex justify-content-between align-items-center mb-4 category-header">
+        <h2 className="fw-bold mb-0">Browse By Category</h2>
+        <div className="d-flex gap-2">
+          <button className="btn btn-light border rounded-circle p-2">
+            <img src="LeftArrow.svg" alt="Left" width="36" height="36" />
+          </button>
+          <button className="btn btn-light border rounded-circle p-2">
+            <img src="RightArrow.svg" alt="Right" width="36" height="36" />
+          </button>
+        </div>
+      </div>
 
       {/* Category Cards */}
       <div className="d-flex flex-wrap gap-3">
         <div
-          className="border rounded p-4 text-center flex-fill category-card"
+          className="border rounded p-4 text-center  category-card"
           style={{ minWidth: "140px" }}
         >
           <img src="Category-CellPhone.svg" alt="Phones" className="mb-2" />
-          <p className="mb-0 fw-medium">Phones</p>
+          <p className="mb-0 category-name">Phones</p>
         </div>
         <div
-          className="border rounded p-4 text-center flex-fill category-card"
+          className="border rounded p-4 text-center  category-card"
           style={{ minWidth: "140px" }}
         >
           <img src="Category-Computer.svg" alt="Computers" className="mb-2" />
-          <p className="mb-0 fw-medium">Computers</p>
+          <p className="mb-0 category-name">Computers</p>
         </div>
         <div
-          className="border rounded p-4 text-center flex-fill category-card"
+          className="border rounded p-4 text-center  category-card "
           style={{ minWidth: "140px" }}
         >
           <img
@@ -35,28 +47,28 @@ export default function Categories() {
             alt="SmartWatch"
             className="mb-2"
           />
-          <p className="mb-0 fw-medium">SmartWatch</p>
+          <p className="mb-0 category-name">SmartWatch</p>
         </div>
         <div
-          className="border rounded p-4 text-center flex-fill category-card"
+          className="border rounded p-4 text-center  category-card"
           style={{ minWidth: "140px" }}
         >
           <img src="Category-Camera.svg" alt="Camera" className="mb-2" />
-          <p className="mb-0 fw-medium">Camera</p>
+          <p className="mb-0 category-name">Camera</p>
         </div>
         <div
-          className="border rounded p-4 text-center flex-fill category-card"
+          className="border rounded p-4 text-center  category-card"
           style={{ minWidth: "140px" }}
         >
           <img src="Category-Headphone.svg" alt="HeadPhones" className="mb-2" />
-          <p className="mb-0 fw-medium">HeadPhones</p>
+          <p className="mb-0 category-name">HeadPhones</p>
         </div>
         <div
-          className="border rounded p-4 text-center flex-fill category-card"
+          className="border rounded p-4 text-center  category-card"
           style={{ minWidth: "140px" }}
         >
           <img src="Category-Gamepad.svg" alt="Gaming" className="mb-2" />
-          <p className="mb-0 fw-medium">Gaming</p>
+          <p className="mb-0 category-name">Gaming</p>
         </div>
       </div>
     </div>

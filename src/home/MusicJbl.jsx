@@ -2,7 +2,7 @@ import React from "react";
 
 export default function MusicJbl() {
   return (
-    <div className="container py-5 bg-dark text-white rounded">
+    <div className="container py-5 bg-dark text-white rounded responsive-rounded">
       <div className="row align-items-center">
         {/* Left Side */}
         <div className="col-md-6 mb-4 mb-md-0 ps-4">

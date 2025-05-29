@@ -28,7 +28,7 @@ export default function Navbar() {
             <div className="d-flex flex-column flex-lg-row gap-4 mt-3 mt-lg-0">
               <NavLink
                 className={({ isActive }) =>
-                  `nav-item text-decoration-none text-dark fs-5 ${
+                  `nav-item text-decoration-none text-dark  ${
                     isActive ? "active-link" : ""
                   }`
                 }
@@ -38,7 +38,7 @@ export default function Navbar() {
               </NavLink>
               <NavLink
                 className={({ isActive }) =>
-                  `nav-item text-decoration-none text-dark fs-5 ${
+                  `nav-item text-decoration-none text-dark  ${
                     isActive ? "active-link" : ""
                   }`
                 }
@@ -48,7 +48,7 @@ export default function Navbar() {
               </NavLink>
               <NavLink
                 className={({ isActive }) =>
-                  `nav-item text-decoration-none text-dark fs-5 ${
+                  `nav-item text-decoration-none text-dark ${
                     isActive ? "active-link" : ""
                   }`
                 }
@@ -58,7 +58,7 @@ export default function Navbar() {
               </NavLink>
               <NavLink
                 className={({ isActive }) =>
-                  `nav-item text-decoration-none text-dark fs-5 ${
+                  `nav-item text-decoration-none text-dark ${
                     isActive ? "active-link" : ""
                   }`
                 }
@@ -68,7 +68,7 @@ export default function Navbar() {
               </NavLink>
             </div>
 
-            <div className="mt-3 mt-lg-0">
+            <div className="d-flex align-items-center gap-3 mt-3 mt-lg-0">
               <div className="input-group" style={{ maxWidth: "243px" }}>
                 <input
                   type="text"
@@ -84,6 +84,29 @@ export default function Navbar() {
                   />
                 </span>
               </div>
+
+              {/* Icons beside search bar */}
+              <NavLink to="/wishlist">
+                <img
+                  src="WishlistImg.svg"
+                  alt="Wishlist"
+                  style={{ width: "32px", height: "32px" }}
+                />
+              </NavLink>
+              <NavLink to="/cart">
+                <img
+                  src="CartImg.svg"
+                  alt="Cart"
+                  style={{ width: "32px", height: "32px" }}
+                />
+              </NavLink>
+              <NavLink to="/account">
+                <img
+                  src="user.svg"
+                  alt="My Account"
+                  style={{ width: "32px", height: "32px" }}
+                />
+              </NavLink>
             </div>
           </div>
         </div>
