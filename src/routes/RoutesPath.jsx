@@ -7,18 +7,54 @@ import Signin from "../signin/Signin";
 import Login from "../login/Login";
 import Cart from "../cart/Cart";
 import WishList from "../wishlist/WishList";
+import ProtectRoutePaths from "./ProtectRoutePaths";
 
 export default function RoutesPath() {
   return (
     <div>
       <Routes>
-        <Route path="/home" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route
+          path="/home"
+          element={
+            <ProtectRoutePaths>
+              <Home />
+            </ProtectRoutePaths>
+          }
+        />
+        <Route
+          path="/about"
+          element={
+            <ProtectRoutePaths>
+              <About />{" "}
+            </ProtectRoutePaths>
+          }
+        />
+        <Route
+          path="/contact"
+          element={
+            <ProtectRoutePaths>
+              <Contact />{" "}
+            </ProtectRoutePaths>
+          }
+        />
         <Route path="/sign-in" element={<Signin />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/wishlist" element={<WishList />} />
+        <Route
+          path="/cart"
+          element={
+            <ProtectRoutePaths>
+              <Cart />{" "}
+            </ProtectRoutePaths>
+          }
+        />
+        <Route
+          path="/wishlist"
+          element={
+            <ProtectRoutePaths>
+              <WishList />
+            </ProtectRoutePaths>
+          }
+        />
       </Routes>
     </div>
   );

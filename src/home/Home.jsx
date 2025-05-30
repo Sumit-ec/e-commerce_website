@@ -106,8 +106,14 @@ export default function Home() {
                     Up to 10% <br />
                     off Voucher
                   </h2>
-                  <button className="iphone-shop-button mt-4 text-decoration-underline">
+                  <button className="iphone-shop-button mt-4 text-decoration-underline d-inline-flex align-items-center gap-2">
                     Shop Now
+                    {/* <img
+                      src="icons arrow-right.svg"
+                      alt="arrow"
+                      width="20px"
+                      height="20px"
+                    /> */}
                   </button>
                 </div>
 

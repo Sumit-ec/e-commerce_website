@@ -25,21 +25,21 @@ export default function Categories() {
       {/* Category Cards */}
       <div className="d-flex flex-wrap gap-3">
         <div
-          className="border rounded p-4 text-center  category-card"
+          className="border rounded p-4 text-center flex-fill category-card"
           style={{ minWidth: "140px" }}
         >
           <img src="Category-CellPhone.svg" alt="Phones" className="mb-2" />
           <p className="mb-0 category-name">Phones</p>
         </div>
         <div
-          className="border rounded p-4 text-center  category-card"
+          className="border rounded p-4 text-center flex-fill category-card"
           style={{ minWidth: "140px" }}
         >
           <img src="Category-Computer.svg" alt="Computers" className="mb-2" />
           <p className="mb-0 category-name">Computers</p>
         </div>
         <div
-          className="border rounded p-4 text-center  category-card "
+          className="border rounded p-4 text-center flex-fill category-card "
           style={{ minWidth: "140px" }}
         >
           <img
@@ -50,21 +50,21 @@ export default function Categories() {
           <p className="mb-0 category-name">SmartWatch</p>
         </div>
         <div
-          className="border rounded p-4 text-center  category-card"
+          className="border rounded p-4 text-center flex-fill category-card"
           style={{ minWidth: "140px" }}
         >
           <img src="Category-Camera.svg" alt="Camera" className="mb-2" />
           <p className="mb-0 category-name">Camera</p>
         </div>
         <div
-          className="border rounded p-4 text-center  category-card"
+          className="border rounded p-4 text-center flex-fill category-card"
           style={{ minWidth: "140px" }}
         >
           <img src="Category-Headphone.svg" alt="HeadPhones" className="mb-2" />
           <p className="mb-0 category-name">HeadPhones</p>
         </div>
         <div
-          className="border rounded p-4 text-center  category-card"
+          className="border rounded p-4 text-center flex-fill category-card"
           style={{ minWidth: "140px" }}
         >
           <img src="Category-Gamepad.svg" alt="Gaming" className="mb-2" />
