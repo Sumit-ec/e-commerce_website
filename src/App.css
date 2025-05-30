@@ -1,42 +1,748 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.row {
+    --bs-gutter-x: 0;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Navigation Bar */
+
+.nav-item {
+font-family: "Poppins", sans-serif;
+}
+
+@media (min-width: 992px) {
+    .w-md-50 {
+        width: 50% !important;
+    }
+}
+
+.nav-link.active {
+  text-decoration: underline;
+}
+
+.active-link {
+  border-bottom: 1px solid #000000;
+  padding-bottom: 2px;
+}
+
+/* Home Page Styling */
+
+.button-menu{
+  background-color: #fff;
+  color: #000;
+  border-radius: 4px;
+  border: 1px solid #000;
+  padding: 4px 8px 4px 8px;
+}
+
+.large-div {
+  min-height: 400px;
+}
+
+.side-banner{
+  background-color: #000;
+  color: #fff;
+  min-height: 400px;
+  padding: 50px;
+  border-radius: 8px;
+}
+
+.main-banner {
+  flex-grow: 1;
+  padding: 35px;
+}
+
+.text-iphone {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.iphone-shop-button {
+  padding: 10px 20px;
+  background-color: black;
+  color: #fff;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .text-iphone {
+    font-size: 1.5rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .iphone-shop-button {
+    font-size: 0.9rem;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.iphone-14 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+
+.red-bar-style {
+  width: 20px;
+  height: 40px;
+  border-radius: 4px;
+  background-color: #DB4444;
+}
+
+.header-text {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #DB4444;
+}
+
+.card-info {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #000000;
+}
+
+.fw-bold {
+  font-weight: 600 !important;
+
+}
+
+.view-button{
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  background-color:  #DB4444;
+
+}
+
+/* .view-product {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color:  #DB4444;
+} */
+
+.top-section {
+  display: flex;
+}
+
+.bar-line {
+  border-right: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+  height: 100%;
+  padding-top: 25px;
+}
+
+.banner-img {
+  width: 100%;
+  height: 100%;
+  /* object-fit: contain; */
+}
+
+
+.sidebar {
+  width: 250px;
+  padding-right: 20px;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+}
+
+.list-item {
+  font-family: "Poppins", sans-serif;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.list-item-arrow::after {
+  content: ">";
+  float: right;
+}
+
+
+/* Flash Sale Home Page Styling */
+
+.padding-card {
+  padding: 20px;
 }
 
 .card {
-  padding: 2em;
+  --bs-card-border-color: none;
+}
+/* Categories Home Page */
+
+.category-card {
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #dee2e6; 
 }
 
-.read-the-docs {
-  color: #888;
+.category-card:hover {
+  background-color: #dc3545; 
+  color: #fff;
+  border-color: #dc3545;
+}
+
+.category-name {
+  font-weight: 400;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+}
+
+@media (max-width: 478px) {
+  .category-header {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 1rem;
+  }
+}
+
+
+/* Best Selling Products  */
+
+.product-card {
+  background-color: #fff;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.head-style {
+  padding-left: 20px; 
+}
+
+.sub-head-style {
+  padding-right: 20px;
+}
+
+/* .product-card:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+} */
+
+.product-icons span {
+  font-size: 16px;
+  background: #fff;
+  border-radius: 50%;
+  padding: 5px;
+  margin-left: 5px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+/* MusicJbl Section */
+
+@media (max-width: 575.98px) {
+  .responsive-rounded {
+    border-radius: 0 !important;
+  }
+}
+
+
+.color-text {
+  color: #00FF66;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.button-style{
+  background-color: #00FF66;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #FAFAFA;
+}
+
+.timer-style {
+  width: 62px;
+  height: 62px;
+}
+
+.counter-text {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.counter-time {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 11px;
+}
+
+/* Our Products Home Page */
+
+.new-item {
+  width: 51px;
+  height: 26px;
+  background-color: #00FF66;
+  padding: 4px 12px 4px 12px;
+  gap: 10px;
+}
+
+.new-text {
+  font-size: 12px;
+  text-align: center;
+  font-weight: 400;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+}
+
+.icon-img {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.price-rating {
+  font-size: 0.85rem;
+}
+
+.rating-stars {
+  height: 14px;
+}
+
+.review-count {
+  font-size: 0.8rem;
+}
+
+
+.new-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #00FF66;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+
+
+
+/* Featured Section  */
+
+.btn {
+  --bs-btn-color: #FFFFFF;
+}
+
+
+
+/* Signin page Styling */
+
+.input-signin {
+    border: none;
+    border-bottom: 1px solid #000;
+    border-radius: 0%;
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+.signin-image {
+    width: 900px;
+}
+
+.login-button {
+    color: #000;
+}
+
+.signup-button:hover {
+  border: 2px solid black !important;
+}
+
+/* .signup-button {
+  padding: 16px ;
+} */
+
+/* .text-signin {
+  color: #000;
+} */
+
+/* Login Page styling */
+
+.custom-login-btn {
+  background-color: #DB4444;
+  border-color: #DB4444;
+  color: #fff;
+  width: 29%;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+
+@media (min-width: 767px) and (max-width: 1034px) {
+  .custom-login-btn {
+    width: 100% !important;
+  }
+}
+
+/* @media (max-width: 345px) {
+    .custom-login-btn  {
+        width: 100% !important;
+    }
+} */
+
+.custom-login-btn:hover,
+.custom-login-btn:focus,
+.custom-login-btn:active,
+.custom-login-btn:focus:active {
+  background-color: #DB4444 !important;
+  border-color: #DB4444 !important;
+  box-shadow: none;
+}
+
+.btn {
+    --bs-btn-border-radius: none;
+}
+
+/* Contact Page Styling */
+
+.top-nav {
+    margin-top: 53px;
+    margin-left: 0px;
+}
+
+.brd-cum-home {
+    font-weight: 400;
+    color: #000000;
+    font-size: 14px;
+}
+
+.breadcrumb {
+    background: transparent;
+    padding: 0;
+    margin-bottom: 16px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.breadcrumb-item {
+    font-size: 14px;
+    font-weight: 400;
+    color: #000000;
+}
+
+.breadcrumb-item a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.breadcrumb-item.active {
+    font-weight: 600;
+    color: #000;
+}
+
+
+.detail-contact{
+    border-bottom: 1px #000 solid ;
+}
+
+.contact-container {
+    padding-right: 101px;
+}
+.call-us {
+    font-weight: 500;
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+}
+
+.call-details {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #000000;
+}
+
+.color-bg {
+    background-color: #F5F5F5;
+    border: none;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.area-message {
+    height: 207px;
+}
+
+.form-control.color-bg:focus {
+  background-color: #F5F5F5 !important;
+
+}
+
+.button-submit {
+  float: inline-end;
+   border-radius: 4px;  
+   font-family: "Poppins", sans-serif;
+   font-weight: 500;    
+   font-size: 16px; 
+   padding: 16px 48px 16px 48px;
+}
+
+@media (max-width: 767px) {
+    .button-submit {
+        width: 100% !important;
+    }
+}
+
+.space-around {
+    margin-top: 100px;
+    margin-bottom: 65px;
+}
+
+/* About Page Styling */
+
+.head-text {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 54px;
+    text-align: justify;
+}
+
+.head-body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: justify;
+}
+
+.text-container {
+    padding-right: 80px;
+}
+
+.container-fluid {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.img-right {
+  margin-right: 0;
+  padding: 0;
+  display: block;
+}
+
+@media (max-width: 767px) {
+    .img-screen {
+        padding: 20px !important;
+    }
+}
+
+.about-card {
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.border-primary {
+    --bs-border-opacity: 1;
+    border-color: #000 !important;
+}
+
+.about-number {
+font-family: "Inter", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.about-label {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+  color: #333;
+}
+
+.about-card {
+  border-radius: 8px;
+  background-color: #fff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+.about-card:hover {
+  background-color: #DB4444;
+  color: white;
+  border: none;
+}
+
+.about-card:hover .about-label,
+.about-card:hover .about-number {
+  color: white;
+}
+
+
+.card-size {
+    padding: 10px;
+}
+
+.founder-details {
+    font-family:  "Inter", sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.founder-position {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.bottom-section {
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.bottom-text {
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #000000;
+}
+
+
+.founders-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 40px 0;
+  /* background-color: red; */
+}
+
+.founder-card {
+  /* border: 1px solid black; */
+  border-radius: 8px;
+  background-color: #fff;
+  width: 370px;
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+}
+
+.founder-card:hover {
+  transform: translateY(-5px);
+}
+
+@media (max-width: 768px) {
+  .founders-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Cart Page  */
+
+.return-shop-button {
+  color: #000;
+  background-color: #FFFFFF;
+  border: 1px solid #000;
+  border-radius: 4px;
+  padding: 16px 48px 16px 48px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.return-shop-button:hover {
+  background-color: #DB4444;
+  color: #FFFFFF;
+}
+
+.table-head-text {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #000000;
+}
+
+.table > tbody > tr > td {
+  border-bottom: none !important;
+}
+
+.table > tbody > tr {
+  background-color: transparent !important;
+}
+
+
+/* WishList Page */
+
+.name-header {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.wishlist-button{
+  background-color: #FFFFFF;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 4px;
+  padding: 16px 48px 16px 48px;
+}
+
+.wishlist-button:hover {
+  background-color: #DB4444;
+  color: #FFFFFF;
+}
+
+/* Footer styling */
+
+.footer-logo {
+    gap: 45px;
+}
+
+.footer-section {
+    background-color: #000;  
+}
+
+.form-footer {
+    border: 2px solid white;
+    max-width: 217px;
+}
+
+.signup-button {
+    border: 2px solid black;
+}
+.download-para {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+}
+.bottom-text {
+    color: #F9F9F9;
+
+}
+.custom-email-input {
+  font-weight: 400;
+  padding: 8px 16px;
+  border: none;
+}
+
+.custom-email-input::placeholder {
+  color: rgba(255, 255, 255, 0.4); 
+  font-weight: 400;
+}
+
+.subscribe-form button {
+  background-color: transparent;
+  border: none;
 }
