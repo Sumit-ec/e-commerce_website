@@ -5,20 +5,10 @@ export default function Signin() {
   const [name, setName] = useState("");
   const [emailOrPhone, setEmailOrPhone] = useState("");
   const [password, setPassword] = useState("");
-  const [emailError, setEmailError] = useState("");
   const redirect = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    const gmailAddress = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
-
-    if (!gmailAddress.test(emailOrPhone)) {
-      setEmailError("Invalid email. Please use a valid Gmail address.");
-      return;
-    } else {
-      setEmailError("");
-    }
 
     const userInfo = {
       name,
@@ -73,9 +63,6 @@ export default function Signin() {
                   onChange={(e) => setEmailOrPhone(e.target.value)}
                   required
                 />
-                {emailError && (
-                  <small className="text-danger">{emailError}</small>
-                )}
               </div>
               <div className="mb-3">
                 <input

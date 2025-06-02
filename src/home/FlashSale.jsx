@@ -1,9 +1,87 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchProducts } from "../redux/Reducer/ProductSlice";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 export default function FlashSale() {
+  const dispatch = useDispatch();
+  const sliderRef = useRef(null);
+
+  const {
+    items: products,
+    loading,
+    error,
+  } = useSelector((state) => state.products);
+
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const [mobilePage, setMobilePage] = useState(0);
+
+  useEffect(() => {
+    dispatch(fetchProducts());
+  }, [dispatch]);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const mobile = window.innerWidth < 768;
+      setIsMobile(mobile);
+      if (!mobile) setMobilePage(0);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const sliderSettings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    arrows: false,
+  };
+
+  const renderCard = (product) => (
+    <div className="card position-relative h-100">
+      <span className="badge bg-danger position-absolute top-0 start-0 m-2">
+        -35%
+      </span>
+      <img
+        src={product.image}
+        className="card-img-top"
+        alt={product.title}
+        style={{
+          backgroundColor: "#F5F5F5",
+          height: "200px",
+          objectFit: "contain",
+        }}
+      />
+      <div className="position-absolute top-0 end-0 p-2 d-flex flex-column align-items-end">
+        <img src="Wishlist.svg" alt="heart" style={{ width: "20px" }} />
+        <img src="View.svg" alt="eye" style={{ width: "20px" }} />
+      </div>
+      <div className="card-body">
+        <h6 className="card-title card-info">{product.title}</h6>
+        <p className="card-text text-danger fw-bold mb-0">
+          ${product.price.toFixed(2)}
+          <span className=" ms-2 text-muted text-decoration-line-through">
+            ${product.price.toFixed(2)}
+          </span>
+        </p>
+        <div className="text-warning">
+          <img src="Fivestar.svg" alt="star" />
+          <span className="text-muted">({product.rating?.count || 0})</span>
+        </div>
+      </div>
+    </div>
+  );
+
+  const totalPages = Math.ceil(products.length / 4);
+
   return (
     <div className="container py-5 line-bttn">
-      {/* Header Section with red bar and "Today's" */}
+      {/* Header */}
       <div className="d-flex justify-content-between align-items-center flex-wrap">
         <div
           className="d-flex align-items-center gap-3"
@@ -16,209 +94,77 @@ export default function FlashSale() {
         </div>
       </div>
 
-      {/* Flash Sales title + counter + arrow buttons */}
+      {/* Title, Countdown, Arrows */}
       <div className="d-flex justify-content-between align-items-center flex-wrap px-3 py-2">
         <h2 className="fw-bold mb-0">Flash Sales</h2>
 
-        {/* Countdown */}
         <div className="d-flex gap-3 align-items-center">
-          <div className="text-center">
-            <small className="text-muted">Days</small>
-            <h5 className="mb-0 fw-bold">03</h5>
-          </div>
-          <div className="text-center">
-            <small className="text-muted">Hours</small>
-            <h5 className="mb-0 fw-bold">23</h5>
-          </div>
-          <div className="text-center">
-            <small className="text-muted">Minutes</small>
-            <h5 className="mb-0 fw-bold">19</h5>
-          </div>
-          <div className="text-center">
-            <small className="text-muted">Seconds</small>
-            <h5 className="mb-0 fw-bold">56</h5>
-          </div>
+          {["Days", "Hours", "Minutes", "Seconds"].map((label, idx) => (
+            <div className="text-center" key={label}>
+              <small className="text-muted">{label}</small>
+              <h5 className="mb-0 fw-bold">{["03", "23", "19", "56"][idx]}</h5>
+            </div>
+          ))}
         </div>
 
-        {/* Arrow Buttons */}
         <div className="d-flex gap-2">
-          <button className="btn btn-light border rounded-circle p-2">
+          <button
+            className="btn btn-light border rounded-circle p-2"
+            onClick={() => {
+              if (!isMobile) {
+                sliderRef.current?.slickPrev();
+              } else {
+                setMobilePage((prev) =>
+                  prev === 0 ? totalPages - 1 : prev - 1
+                );
+              }
+            }}
+          >
             <img src="LeftArrow.svg" alt="Left" width="36px" height="36px" />
           </button>
-          <button className="btn btn-light border rounded-circle p-2">
+          <button
+            className="btn btn-light border rounded-circle p-2"
+            onClick={() => {
+              if (!isMobile) {
+                sliderRef.current?.slickNext();
+              } else {
+                setMobilePage((prev) => (prev + 1) % totalPages);
+              }
+            }}
+          >
             <img src="RightArrow.svg" alt="Right" width="36px" height="36px" />
           </button>
         </div>
       </div>
 
-      {/* Product Cards */}
-      <div className="row g-4">
-        {/* Product 1 */}
-        <div className="col-md-3 padding-card">
-          <div className="card position-relative h-100">
-            <span className="badge bg-danger position-absolute top-0 start-0 m-2">
-              -40%
-            </span>
-            <img
-              src="Controller.svg"
-              className="card-img-top"
-              alt="HAVIT HV-G92 Gamepad"
-              style={{ backgroundColor: "#F5F5F5" }}
-            />
-            <div className="position-absolute top-0 end-0 p-2 d-flex flex-column align-items-end">
-              <img
-                src="Wishlist.svg"
-                alt="heart"
-                style={{ top: "2px", width: "20px" }}
-              />
-              <img
-                src="View.svg"
-                alt="eye"
-                style={{ top: "4px", width: "20px" }}
-              />
+      {/* Product List */}
+      {loading && <p>Loading...</p>}
+      {error && <p>Error: {error}</p>}
+      {!loading && !error && (
+        <>
+          {!isMobile ? (
+            <Slider ref={sliderRef} {...sliderSettings}>
+              {products.slice(0, 10).map((product) => (
+                <div key={product.id} className="padding-card px-2">
+                  {renderCard(product)}
+                </div>
+              ))}
+            </Slider>
+          ) : (
+            <div className="row">
+              {products
+                .slice(mobilePage * 4, mobilePage * 4 + 4)
+                .map((product) => (
+                  <div key={product.id} className="col-12 mb-4">
+                    {renderCard(product)}
+                  </div>
+                ))}
             </div>
-            <div className="card-body">
-              <p className="card-title card-info">HAVIT HV-G92 Gamepad</p>
-              <p className="card-text text-danger fw-bold mb-0">
-                $120{" "}
-                <span className="text-muted text-decoration-line-through">
-                  $160
-                </span>
-              </p>
-              <div className="text-warning">
-                <img src="Fivestar.svg" alt="star" />
-                <span className="text-muted">(88)</span>
-              </div>
-            </div>
-          </div>
-        </div>
+          )}
+        </>
+      )}
 
-        {/* Product 2 */}
-        <div className="col-md-3 padding-card">
-          <div className="card position-relative h-100">
-            <span className="badge bg-danger position-absolute top-0 start-0 m-2">
-              -35%
-            </span>
-            <div
-              className="position-relative"
-              style={{ backgroundColor: "#F5F5F5" }}
-            >
-              <img
-                src="Keyboard.svg"
-                className="card-img-top"
-                alt="AK-900 Wired Keyboard"
-              />
-              <div className="position-absolute top-0 end-0 p-2 d-flex flex-column align-items-end">
-                <img
-                  src="Wishlist.svg"
-                  alt="heart"
-                  style={{ top: "2px", width: "20px" }}
-                />
-                <img
-                  src="View.svg"
-                  alt="eye"
-                  style={{ top: "4px", width: "20px" }}
-                />
-              </div>
-            </div>
-            <div className="card-body">
-              <h6 className="card-title card-info">AK-900 Wired Keyboard</h6>
-              <p className="card-text text-danger fw-bold mb-0">
-                $960{" "}
-                <span className="text-muted text-decoration-line-through">
-                  $1160
-                </span>
-              </p>
-              <div className="text-warning">
-                <img src="FourStar.svg" alt="star" />
-                <span className="text-muted">(75)</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Product 3 */}
-        <div className="col-md-3 padding-card">
-          <div className="card position-relative h-100">
-            <span className="badge bg-danger position-absolute top-0 start-0 m-2">
-              -30%
-            </span>
-            <img
-              src="Monitor.svg"
-              className="card-img-top"
-              alt="IPS LCD Gaming Monitor"
-              style={{ backgroundColor: "#F5F5F5" }}
-            />
-            <div className="position-absolute top-0 end-0 p-2 d-flex flex-column align-items-end">
-              <img
-                src="Wishlist.svg"
-                alt="heart"
-                style={{ top: "2px", width: "20px" }}
-              />
-              <img
-                src="View.svg"
-                alt="eye"
-                style={{ top: "4px", width: "20px" }}
-              />
-            </div>
-            <div className="card-body">
-              <h6 className="card-title card-info">IPS LCD Gaming Monitor</h6>
-              <p className="card-text text-danger fw-bold mb-0">
-                $370{" "}
-                <span className="text-muted text-decoration-line-through">
-                  $400
-                </span>
-              </p>
-              <div className="text-warning">
-                <img src="Fivestar.svg" alt="star" />
-                <span className="text-muted">(99)</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Product 4 */}
-        <div className="col-md-3 padding-card">
-          <div className="card position-relative h-100">
-            <span className="badge bg-danger position-absolute top-0 start-0 m-2">
-              -25%
-            </span>
-            <img
-              src="Chair.svg"
-              className="card-img-top"
-              alt="S-Series Comfort Chair"
-              style={{ backgroundColor: "#F5F5F5" }}
-            />
-            <div className="position-absolute top-0 end-0 p-2 d-flex flex-column align-items-end">
-              <img
-                src="Wishlist.svg"
-                alt="heart"
-                style={{ top: "2px", width: "20px" }}
-              />
-              <img
-                src="View.svg"
-                alt="eye"
-                style={{ top: "4px", width: "20px" }}
-              />
-            </div>
-            <div className="card-body">
-              <h6 className="card-title card-info">S-Series Comfort Chair</h6>
-              <p className="card-text text-danger fw-bold mb-0">
-                $375{" "}
-                <span className="text-muted text-decoration-line-through">
-                  $400
-                </span>
-              </p>
-              <div className="text-warning">
-                <img src="FourHalfStar.svg" alt="star" />
-                <span className="text-muted">(99)</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* View All Products Button */}
+      {/* View All Button */}
       <div className="text-center mt-3">
         <button className="btn btn-danger px-4 py-2 rounded view-button">
           View All Products
